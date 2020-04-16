@@ -13,9 +13,7 @@ url = 'https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda75947
 browser.get(url)
 
 time.sleep(5)
-numbers = browser.find_elements_by_xpath("//div[@class='widget flex-vertical full-height indicator-widget ember-view']")  	#//div[@id='ember25']" id's kept changing daily so I try it via class name
-#NO_Dead = browser.find_elements_by_xpath("//div[@class='widget flex-vertical full-height indicator-widget ember-view']")		#//div[@id='ember63']
-#NO_Recovered = browser.find_elements_by_xpath("//div[@class='widget flex-vertical full-height indicator-widget ember-view']")	#//div[@id='ember77']
+numbers = browser.find_elements_by_xpath("//div[@class='widget flex-vertical full-height indicator-widget ember-view']")
 no_inf = str(numbers[0].text).split('\n')
 no_dead = str(numbers[2].text).split('\n')
 no_recov = str(numbers[3].text).split('\n')
