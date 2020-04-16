@@ -7,8 +7,8 @@ from selenium.common.exceptions import TimeoutException
 import time
 import csv
 
-path = r'/home/dsnoeken/geck/geckodriver'
-browser = webdriver.Firefox(executable_path=path)
+path = r'/home/dsnoeken/geck/geckodriver'   		#put your own path here, to the geckodriver
+browser = webdriver.Firefox(executable_path=path)	#Make sure you have firefox
 url = 'https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6'
 browser.get(url)
 
